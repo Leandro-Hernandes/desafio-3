@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+//Estilização da fonte página
+body{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+//estilização da tag HEADER
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1% 0;
+}
+header nav{   
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+}
+//estilização da tag UL contida dentro da NAV
+header nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 20px;  
+    width: 100%;    
+}
+//estilização da tag li contida dentro da UL
+header nav ul li:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 35px;
+}
+
+//estilização da tag DIV que agrupa a imagem de banner
+.banner{   
+    height: 250px;
+    background-image: url('imagens/BACKGROUND.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+}
+//Estilização da tag Main
+main{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+//Estilização paras as duas seções contidas dentro de MAIN
+main .secao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+//Estilização da primeira seção contida dentro de MAIN
+main .secao1 div{
+    font-size:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    text-align: center;   
+}
+//Estilização dos H1 contido dentro da DIV da SECAO1
+main .secao div h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+//Estilização dos parágrafo contidO dentro da DIV da SECAO1
+main .secao1 div p{
+    display: flex;
+    font-size: 36px;
+}
+//Estilização do H2 contidO dentro da DIV da SECAO2
+main .secao2 h2{
+    font-size: 30px;    
+}
+//Estilização da DIV contida dentro da SECAO2
+main .secao2 div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;  
+    width: 90%; 
+}
+
+/*
+.
+.
+.
+Responsividade para dispositivos de até 1024px
+*/
+@media(max-width:1024px){
+    //EStilização da HEADER
+    header{
+        flex-direction: column;
+        padding: 5% 0;
+    }
+    //EStilização que oculta o BANNER da página localizado abaixo da tag HEADER
+    .banner{
+        display: none;
+    }
+    //EStilização da tag img contida dentro da HEADER
+    header img{
+        margin-bottom: 35px;
+    }
+    //EStilização da tag NAV contida dentro da HEADER
+    header nav{
+        height: 150px;
+    }
+    //EStilização das tag UL contida dentro da tag NAV
+    header nav ul{
+        height: 100%;
+        line-height:35px;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    header nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    //EStilização da tag MAIN(Para reduzir o espaçãmento entre a HEADER e MAIN) 
+    main{
+        padding-top: 0;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    main .secao{
+        flex-direction: column;
+        gap:40px;
+    }  
+    //EStilização da tag IMG contida dentro da secao1
+    main .secao1 img{
+        width: 100%;
+    }
+    //EStilização da tag H1 contida dentro da secao1
+    main .secao1 div h1{
+        font-size: 29px;     
+    }
+    //EStilização da tag P contida dentro da secao1
+    main .secao1 div P{
+        font-size: 27px;      
+    }
+    //EStilização da tah H2 contida dentro da secao2
+    main .secao2 h2{
+        font-size:25px;       
+    }
+    //EStilização do alinhamento do texto contido dentro da secao2
+    main .secao2{
+        text-align: center;
+    }
+}
+
+/*
+.
+.
+.
+Responsividade para dispositivos de até 768px
+*/
+@media(max-width:768px){
+    //EStilização da HEADER
+    header{
+        flex-wrap: wrap;
+        padding: 5% 0;
+    }
+    //EStilização que oculta o BANNER da página localizado abaixo da tag HEADER
+    .banner{
+        display: none;
+    }
+    //EStilização da tag img contida dentro da HEADER
+    header img{
+        margin-bottom: 20px;
+    }
+    //EStilização da tag NAV contida dentro da HEADER
+    header nav{
+        height: 150px;
+    }
+    //EStilização das tag UL contida dentro da tag NAV
+    header nav ul{
+        height: 100%;
+        line-height:30px;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    header nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    //EStilização da tag MAIN(Para reduzir o espaçãmento entre a HEADER e MAIN) 
+    main{
+        padding-top: 0;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    main .secao{
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap:40px;
+    }  
+    //EStilização da tag IMG contida dentro da secao1
+    main .secao1 img{
+        width: 100%;
+    }
+    //EStilização da tag H1 contida dentro da secao1
+    main .secao1 div h1{
+        font-size: 29px;     
+    }
+    //EStilização da tag P contida dentro da secao1
+    main .secao1 div P{
+        font-size: 27px;      
+    }
+    //EStilização da tah H2 contida dentro da secao2
+    main .secao2 h2{
+        font-size:25px;       
+    }
+    //EStilização do alinhamento do texto contido dentro da secao2
+    main .secao2{
+        text-align: center;
+    }
+}
+
+
+/*
+.
+.
+.
+Responsividade para dispositivos de até 425px
+*/
+@media(max-width:425px){
+    //EStilização da HEADER
+    header{
+        flex-wrap: wrap;
+        padding: 5% 0;
+    }
+    //EStilização que oculta o BANNER da página localizado abaixo da tag HEADER
+    .banner{
+        display: none;
+    }
+    //EStilização da tag img contida dentro da HEADER
+    header img{
+        margin-bottom: 20px;
+    }
+    //EStilização da tag NAV contida dentro da HEADER
+    header nav{
+        height: 150px;
+    }
+    //EStilização das tag UL contida dentro da tag NAV
+    header nav ul{
+        height: 100%;
+        line-height:30px;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    header nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    main .secao{
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap:40px;
+    }  
+    //EStilização da tag IMG contida dentro da secao1
+    main .secao1 img{
+        width: 100%;
+    }
+    //EStilização da tag H1 contida dentro da secao1
+    main .secao1 div h1{
+        font-size: 29px;     
+    }
+    //EStilização da tag P contida dentro da secao1
+    main .secao1 div P{
+        font-size: 27px;      
+    }
+    //EStilização da tah H2 contida dentro da secao2
+    main .secao2 h2{
+        font-size:25px;       
+    }
+    //EStilização do alinhamento do texto contido dentro da secao2
+    main .secao2{
+        text-align: center;
+    }
+}
+
+/*
+.
+.
+.
+Responsividade para dispositivos de até 162px
+*/
+@media(max-width:162px){
+    //EStilização da HEADER
+    header{
+        flex-wrap: wrap;
+        padding: 1% 0;
+        margin-bottom:20px     
+    }
+    //EStilização da imagem dentro da HEADER
+    header img{        
+        margin: 0;
+        margin-bottom: 5px;
+        width: 65%;         
+    }
+    //EStilização que oculta o BANNER da página localizado abaixo da tag HEADER
+    .banner{
+        display: none;        
+    }
+    //EStilização da tag NAV contida dentro da HEADER
+    header nav{
+        height: 95px;      
+        width: 100%;
+        border-top: solid black 1px;
+    }
+    //EStilização das tag UL contida dentro da tag NAV
+    header nav ul{
+        height: 100%;
+        line-height:20px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:center;
+        font-size: 10px; 
+        font-weight: bold;
+    }
+    //EStilização das duas SECTIONS(secao1 e secao2) contidas dentro da MAIN
+    main .secao{
+        flex-direction: column;
+        gap:30px;
+        margin-bottom: 20px;
+    }  
+    //EStilização da tag IMG contida dentro da secao1
+    main .secao1 img{
+        width: 100%;
+    }
+    //EStilização da tag H1 contida dentro da secao1
+    main .secao1 div h1{
+        font-size: 20px;     
+    }
+    //EStilização da tag P contida dentro da secao1
+    main .secao1 div P{
+        font-size: 16px;      
+    }
+    //EStilização da tah H2 contida dentro da secao2
+    main .secao2 h2{
+        font-size:18px;       
+    }
+    //EStilização do alinhamento do texto contido dentro da secao2
+    main .secao2{
+        text-align: center;
+    }
+    //EStilização do alinhamento do texto contido dentro da secao2
+    main .secao2 div img{
+        width: 15%;
+    }
+}
